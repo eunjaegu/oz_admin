@@ -42,9 +42,18 @@
 <img width="1214" alt="스크린샷 2025-04-02 오후 7 15 48" src="https://github.com/user-attachments/assets/627f5795-5457-49cc-a2e9-73395d8c594a" />
 
 🔽 신규 상품 등록
+<br>
 <img width="708" alt="스크린샷 2025-04-02 오후 7 16 29" src="https://github.com/user-attachments/assets/cd8228ab-29ff-420f-baa9-0f3366b1dd32" />
 
+---
 
+## 📂 파일 구조
+📂 oz_admin
+│── 📄 nav.html 🧭 (네비게이션)
+│── 📄 join.html 👤 (회원가입)
+│── 📄 products.html 🛍️ (상품 목록)
+
+---
 
 ## 🐛 에러 처리
 - 입력 값이 숫자가 아니거나 음수일 경우, 경고 메시지가 출력됩니다.
