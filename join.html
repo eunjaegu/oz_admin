@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>회원가입</title>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fs-3" href="products.html">📌 관리자 페이지</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto fs-4">
+              <li class="nav-item">
+                <a class="nav-link btn-light rounded-pill px-4" href="products.html">🛍 상품등록</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-light rounded-pill px-4" href="join.html">👤 회원가입</a>
+              </li>
+            </ul>
+            <button class="btn btn-dark rounded-pill ms-3 mt-3 mb-3" onclick="darkMode()">🌙 다크모드</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 회원가입 폼 -->
+      <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-6 col-lg-5 bg-light p-4 rounded shadow">
+            <h3 class="text-center mb-4">회원가입</h3>
+            <form>
+                <table class="table">
+                    <tr>
+                        <th>아이디</th>
+                        <td>
+                            <input class="form-control" name="id" placeholder="아이디" autocomplete="off" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td>
+                            <input type="password" class="form-control" name="pw1" placeholder="비밀번호" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호 확인</th>
+                        <td>
+                            <input type="password" class="form-control" name="pw2" placeholder="비밀번호" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이름</th>
+                        <td>
+                            <input class="form-control" name="name" placeholder="사용자 이름" autocomplete="off" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>전화번호</th>
+                        <td>
+                            <input class="form-control" name="phone" placeholder="휴대폰 번호" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>성별</th>
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="male" checked>
+                                <label class="form-check-label">남자</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="female">
+                                <label class="form-check-label">여자</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>
+                            <input class="form-control" type="email" name="email" placeholder="이메일 주소" autocomplete="off" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>주소</th>
+                        <td>
+                            <input class="form-control" type="text" name="address" placeholder="주소" autocomplete="off" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>수신여부</th>
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="receive" value="sns" checked>
+                                <label class="form-check-label">SNS</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="receive" value="email">
+                                <label class="form-check-label">이메일</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="receive" value="message">
+                                <label class="form-check-label">문자</label>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </table>
+                <div class="text-center mt-3">
+                    <button type="reset" class="btn btn-secondary">다시</button>
+                    <button type="submit" class="btn btn-success" onclick="showSuccessMessage(event)">가입</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- 다크모드 -->
+    <script>
+        function darkMode() {
+          let mode = document.documentElement.getAttribute("data-bs-theme");
+          
+          if (mode === "dark") {
+            document.documentElement.setAttribute("data-bs-theme", "light");
+            document.querySelector(".btn-dark").textContent = "🌙 다크모드";
+          } else {
+            document.documentElement.setAttribute("data-bs-theme", "dark");
+            document.querySelector(".btn-dark").textContent = "☀️ 라이트모드";
+          }
+        }
+      </script>
+
+    <!-- 가입완료 알림창 -->
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault();  // 폼이 실제로 제출되지 않도록 방지
+            alert("가입이 완료되었습니다!");
+        }
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
