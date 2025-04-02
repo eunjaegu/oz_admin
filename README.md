@@ -34,6 +34,7 @@
 ---
 
 ## 🧩 사용 화면
+
 👤 회원가입
 <img width="1214" alt="스크린샷 2025-04-02 오후 7 15 41" src="https://github.com/user-attachments/assets/d2ad6a79-d27b-4462-ab72-09659779ff18" />
 
