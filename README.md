@@ -41,7 +41,7 @@
 🛍 신규 상품 등록
 <img width="1214" alt="스크린샷 2025-04-02 오후 7 15 48" src="https://github.com/user-attachments/assets/627f5795-5457-49cc-a2e9-73395d8c594a" />
 
-🔽 신규 상품 등록
+🔽 반응형 네비게이션 및 다크,라이트모드 전환
 <br>
 <img width="708" alt="스크린샷 2025-04-02 오후 7 16 29" src="https://github.com/user-attachments/assets/cd8228ab-29ff-420f-baa9-0f3366b1dd32" />
 
