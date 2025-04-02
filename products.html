@@ -109,20 +109,42 @@
             setInterval(updateTime, 1000); // 1초마다 업데이트
             updateTime(); // 페이지 로드 시 즉시 실행
 
+        // 다크모드
         function darkMode() {
           let mode = document.documentElement.getAttribute("data-bs-theme");
           
+          // 실제 화면이 어두울 때
           if (mode === "dark") {
+            // 라이트 버튼을 클릭 시, 실제 화면이 밝아지고
             document.documentElement.setAttribute("data-bs-theme", "light");
+            // 버튼명은 다크모드로 변경되고
             document.querySelector(".btn-dark").textContent = "🌙 다크모드";
+            // 화면이 밝아진 값이 저장되서 유지
+            localStorage.setItem("theme", "light"); // 현재 모드를 저장
           } else {
             document.documentElement.setAttribute("data-bs-theme", "dark");
             document.querySelector(".btn-dark").textContent = "☀️ 라이트모드";
+            localStorage.setItem("theme", "dark"); // 현재 모드를 저장
           }
         }
 
-                // 네비게이션 불러오기
-                function loadNavbar() {
+        // 페이지가 로드될 때 저장된 테마 적용
+        document.addEventListener("DOMContentLoaded", () => {
+          const savedTheme = localStorage.getItem("theme") || "light"; // 기본값 light
+          document.documentElement.setAttribute("data-bs-theme", savedTheme);
+          
+          // 버튼명도 같이 저장
+          // 화면이 어두울 때
+          if (savedTheme === "dark") {
+            // 버튼명은 라이트모드로 변경
+            document.querySelector(".btn-dark").textContent = "☀️ 라이트모드";
+          } else {
+            document.querySelector(".btn-dark").textContent = "🌙 다크모드";
+          }
+        });
+
+        // 네비게이션 불러오기
+        function loadNavbar() {
             fetch("nav.html")
                 .then(response => response.text())
                 .then(data => {
